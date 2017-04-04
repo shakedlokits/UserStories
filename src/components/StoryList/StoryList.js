@@ -10,16 +10,17 @@ class StoryList extends Component {
     return (
       <ul className="StoryList">
 
-        {/* iterate bullets and create the sidebar items */}
-        {this.props.sidebarItems.map(function (item) {
-          return (
+        {/* iterate bullets and create the sidebar items if exists */}
+        { this.props.sidebarItems &&
+          this.props.sidebarItems.map(function (item) {
+            return (
             <MenuItem
               {...item}
               onClick={onItemClick}
               key={item.id}
             />
-          )
-        })}
+            )
+          })}
       </ul>
     )
   }

@@ -14,9 +14,11 @@
     "concurrently": "^3.4.0",
     "electron": "^1.6.2",
     "electron-packager": "^8.6.0",
+    "enzyme": "^2.8.0",
     "eslint": "^3.19.0",
     "eslint-plugin-jest": "^19.0.1",
     "node-sass": "^4.5.2",
+    "react-addons-test-utils": "^15.4.2",
     "react-scripts": "0.9.5",
     "wait-on": "^2.0.2"
   },
