@@ -1,0 +1,35 @@
+{
+  "name": "src",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3",
+    "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-dom": "^15.4.2"
+  },
+  "main": "main.js",
+  "homepage": "./",
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "electron": "^1.6.2",
+    "electron-packager": "^8.6.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-jest": "^19.0.1",
+    "node-sass": "^4.5.2",
+    "react-scripts": "0.9.5",
+    "wait-on": "^2.0.2"
+  },
+  "scripts": {
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+    "react-start": "BROWSER=none react-scripts start",
+    "electron-start": "ELECTRON_DEV=1 electron .",
+    "start": "concurrently 'yarn react-start' 'wait-on http://localhost:3000/ && yarn electron-start'",
+    "react-build": "react-scripts build",
+    "electron-build": "electron-packager ./ --overwrite",
+    "build": "yarn react-build && yarn electron-build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
