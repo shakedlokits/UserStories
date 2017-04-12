@@ -1,56 +1,52 @@
 {
-  "ids": [1,2,3],
-  "stories": {
-    "1": {
-      "id": 1,
-      "name": "Becky Johnson",
-      "background": "Singer, 25",
-      "image": "https://placeholdit.imgix.net/~text?w=100&h=100",
-      "bullets": [
-        {
-          "type": "issue",
-          "summary": "it's difficult to read at night"
+    "activeId": 1,
+    "ids": [1, 2, 3],
+    "stories": [{
+            "id": 1,
+            "name": "Becky Johnson",
+            "background": "Singer, 25",
+            "image": "https://placeholdit.imgix.net/~text?w=100&h=100",
+            "bullets": [{
+                    "type": "issue",
+                    "summary": "it's difficult to read at night"
+                },
+                {
+                    "type": "feature",
+                    "summary": "find it interesting to get recommendations"
+                }
+            ],
+            "isSelected": true
         },
         {
-          "type": "feature",
-          "summary": "find it interesting to get recommendations"
-        }
-      ],
-      "isSelected": true
-    },
-    "2": {
-      "id": 2,
-      "name": "Jake Brown",
-      "background": "Developer, 34",
-      "image": "https://placeholdit.imgix.net/~text?w=100&h=100",
-      "bullets": [
-        {
-          "type": "request",
-          "summary": "make the text compatible for color blind"
-        }
-      ],
-      "isSelected": false
-    },
-    "3": {
-      "id": 3,
-      "name": "Donna Jesop",
-      "background": "Industrial Designer, 31",
-      "image": "https://placeholdit.imgix.net/~text?w=100&h=100",
-      "bullets": [
-        {
-          "type": "issue",
-          "summary": "i find it tiring to enter all my details"
+            "id": 2,
+            "name": "Jake Brown",
+            "background": "Developer, 34",
+            "image": "https://placeholdit.imgix.net/~text?w=100&h=100",
+            "bullets": [{
+                "type": "request",
+                "summary": "make the text compatible for color blind"
+            }],
+            "isSelected": false
         },
         {
-          "type": "feature",
-          "summary": "being able to add images is great"
-        },
-        {
-          "type": "feature",
-          "summary": "rate items by importance"
+            "id": 3,
+            "name": "Donna Jesop",
+            "background": "Industrial Designer, 31",
+            "image": "https://placeholdit.imgix.net/~text?w=100&h=100",
+            "bullets": [{
+                    "type": "issue",
+                    "summary": "i find it tiring to enter all my details"
+                },
+                {
+                    "type": "feature",
+                    "summary": "being able to add images is great"
+                },
+                {
+                    "type": "feature",
+                    "summary": "rate items by importance"
+                }
+            ],
+            "isSelected": false
         }
-      ],
-      "isSelected": false
-    }
-  }
+    ]
 }

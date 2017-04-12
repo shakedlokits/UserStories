@@ -25,6 +25,15 @@ function createWindow () {
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
+  // install dev tools
+  const installer = require('electron-devtools-installer')
+  const extensions = [
+    'REACT_DEVELOPER_TOOLS',
+    'REDUX_DEVTOOLS'
+  ]
+
+  extensions.map(name => installer.default(installer[name]))
+
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows

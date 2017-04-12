@@ -1,0 +1,25 @@
+.MenuItem {
+  position: relative;
+  max-width: 300px;
+  list-style-type: none;
+  font: normal normal 400 14px "Roboto", sans-serif;
+  margin: 0 auto 15px 0; }
+  .MenuItem .content {
+    border: 3px solid #000; }
+    .MenuItem .content .image {
+      position: absolute;
+      width: 60px;
+      margin: 10px;
+      left: 8px;
+      border-radius: 100px; }
+    .MenuItem .content .text {
+      position: relative;
+      left: 90px;
+      line-height: 3px;
+      margin: 25px 0 30px; }
+  .MenuItem .slip {
+    list-style-type: none;
+    font-size: 9pt;
+    max-width: 250px;
+    margin: 0 auto 0 30px;
+    border: 3px solid #000; }

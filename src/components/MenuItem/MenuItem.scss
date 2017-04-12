@@ -1,0 +1,37 @@
+@import 'src/css/variables';
+$proto-border: 3px solid #000;
+
+.MenuItem {
+  position: relative;
+  max-width: 300px;
+  list-style-type: none;
+  font: $roboto;
+  margin: 0 auto 15px 0;
+
+  .content {
+    border: $proto-border;
+
+    .image {
+      position: absolute;
+      width: 60px;
+      margin: 10px;
+      left: 8px;
+      border-radius: 100px;
+    }
+
+    .text {
+      position: relative;
+      left: 90px;
+      line-height: 3px;
+      margin: 25px 0 30px;
+    }
+  }
+
+  .slip {
+    list-style-type: none;
+    font-size: 9pt;
+    max-width: 250px;
+    margin: 0 auto 0 30px;
+    border: $proto-border;
+  }
+}

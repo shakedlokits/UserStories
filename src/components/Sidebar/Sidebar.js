@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import MenuItem from '../MenuItem/MenuItem'
 import StoryList from '../StoryList/StoryList'
 import SidebarWidget from '../SidebarWidget/SidebarWidget'
@@ -26,10 +27,22 @@ Sidebar.propTypes = {
         delete menuPrototypes.onClick
         return menuPrototypes
       })()
-    )
+    ).isRequired
   ),
   onItemClick: React.PropTypes.func.isRequired
 }
 
+const mapStateToProps = (state) => {
+  return {
+    sidebarItems: state['stories']
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onItemClick: (id) => {}
+  }
+}
+
 // export the Sidebar component
-export default Sidebar
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar)

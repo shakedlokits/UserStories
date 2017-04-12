@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classNames from 'classnames'
 import './MenuItem.css'
 
 class MenuItem extends Component {
@@ -16,17 +17,25 @@ class MenuItem extends Component {
 
         {/* item issues bottom data slip */}
         </div>
-        <div className="slip">
-          <ul>
+          <ul className="slip fa-ul">
 
             {/* iterate bullets and create the issues */}
             {this.props.bullets.map(function (bullet, id) {
+              // set list icon class name
+              var liClass = classNames({
+                fa: true,
+                'fa-li': true,
+                'fa-flag-checkered': bullet.type === 'feature',
+                'fa-life-ring': bullet.type === 'issue',
+                'fa-check-square-o': bullet.type === 'request'
+              })
+
+              // return bullet
               return (
-                <li key={id}>{bullet.type}: {bullet.summary}</li>
+                <li key={id}><i className={liClass}></i>{bullet.type}: {bullet.summary}</li>
               )
             })}
           </ul>
-        </div>
       </li>
     )
   }
