@@ -15,7 +15,8 @@
                     "summary": "find it interesting to get recommendations"
                 }
             ],
-            "isSelected": true
+            "isSelected": true,
+            "editorContent": null
         },
         {
             "id": 2,
@@ -26,7 +27,8 @@
                 "type": "request",
                 "summary": "make the text compatible for color blind"
             }],
-            "isSelected": false
+            "isSelected": false,
+            "editorContent": null
         },
         {
             "id": 3,
@@ -46,7 +48,8 @@
                     "summary": "rate items by importance"
                 }
             ],
-            "isSelected": false
+            "isSelected": false,
+            "editorContent": null
         }
     ]
 }

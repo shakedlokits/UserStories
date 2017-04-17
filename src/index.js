@@ -5,8 +5,6 @@ import { Provider } from 'react-redux'
 import userStories from './reducers/StoryReducers'
 import App from './App'
 import './index.css'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap/dist/css/bootstrap-theme.css'
 import mockData from './mock-data.json'
 
 // initialize react store

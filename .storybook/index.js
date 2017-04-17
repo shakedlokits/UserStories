@@ -5,6 +5,14 @@ import StoryEditor from '../src/components/StoryEditor/StoryEditor'
 import MenuItem from '../src/components/MenuItem/MenuItem'
 import mockData from '../src/mock-data.json'
 import '../src/index.css'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import userStories from '../src/reducers/StoryReducers'
+
+// initialize react store
+let store = createStore(userStories,
+  mockData,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 storiesOf('StoryList', module)
   .add('with multiple items', () => (
@@ -17,6 +25,8 @@ storiesOf('MenuItem', module)
 ))
 
 storiesOf('StoryEditor', module)
-  .add('with empty state', () => (
-    <StoryEditor />
+  .add('with redux store', () => (
+    <Provider store={store}>
+      <StoryEditor />
+    </Provider>
 ))

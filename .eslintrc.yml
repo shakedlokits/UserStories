@@ -16,3 +16,6 @@ env:
   jest/globals: true
 rules:
   space-before-function-paren: 0
+  react/prop-types:
+    - 2
+    - skipUndeclared: true

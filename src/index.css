@@ -1,5 +1,7 @@
 @import url("./fonts/awesome/css/font-awesome.css");
 @import url("./fonts/index.css");
+@import url("../node_modules/bootstrap/dist/css/bootstrap.css");
+/*@import url("../node_modules/bootstrap/dist/css/bootstrap-theme.css");*/
 body {
   margin: 0;
   padding: 0;
