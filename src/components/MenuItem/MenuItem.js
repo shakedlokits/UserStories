@@ -5,7 +5,8 @@ import './MenuItem.css'
 class MenuItem extends Component {
   render () {
     return (
-      <li className="MenuItem" onClick={this.props.onClick}>
+      <li className="MenuItem"
+        onClick={() => { this.props.onClick(this.props.id) }}>
 
         {/* main item conent: name, background and image */}
         <div className="content">
@@ -60,6 +61,7 @@ var isURL = function (props, propName, componentName) {
 
 // Props type validation
 MenuItem.propTypes = {
+  id: React.PropTypes.number.isRequired,
   name: React.PropTypes.string.isRequired,
   background: React.PropTypes.string.isRequired,
   image: isURL,

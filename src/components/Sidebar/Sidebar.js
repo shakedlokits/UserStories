@@ -3,13 +3,16 @@ import { connect } from 'react-redux'
 import MenuItem from '../MenuItem/MenuItem'
 import StoryList from '../StoryList/StoryList'
 import SidebarWidget from '../SidebarWidget/SidebarWidget'
+import { setActive } from '../../actions/StoryActions'
 
-class Sidebar extends Component {
+export class Sidebar extends Component {
   render () {
     return (
       <div className="Sidebar">
         <StoryList {...this.props}></StoryList>
-        <SidebarWidget onAddItem={() => {}} onDeleteItem={() => {}}></SidebarWidget>
+        <SidebarWidget
+          onAddItem={this.props.onAddItem}
+          onDeleteItem={this.props.onDeleteItem}></SidebarWidget>
       </div>
     )
   }
@@ -29,7 +32,9 @@ Sidebar.propTypes = {
       })()
     ).isRequired
   ),
-  onItemClick: React.PropTypes.func.isRequired
+  onItemClick: React.PropTypes.func.isRequired,
+  onAddItem: React.PropTypes.func.isRequired,
+  onDeleteItem: React.PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => {
@@ -40,7 +45,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onItemClick: (id) => {}
+    onItemClick: (id) => {
+      dispatch(setActive(id))
+    },
+    onAddItem: () => {},
+    onDeleteItem: () => {}
   }
 }
 
